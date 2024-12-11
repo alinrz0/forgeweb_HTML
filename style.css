@@ -4,10 +4,10 @@ body {
     font-family: 'Work Sans', sans-serif;  /* Apply Work Sans font */
 }
 
-/* Default Styles */
+/* header Styles */
 header {
     display: flex;
-    justify-content: space-between; /* Space between logo and dark mode toggle */
+    justify-content: space-between; /* Space out elements horizontally */
     align-items: center;
     padding: 1rem 2rem;
     background-color: #f4f4f4; /* Default Background */
@@ -18,64 +18,59 @@ header {
 .logo-container {
     display: flex;            /* Flexbox to arrange items in a row */
     align-items: center;      /* Vertically center items */
-    justify-content: flex-start; /* Align items to the left (default) */
 }
 
 .logo {
-    display: flex;            /* Apply flexbox to the logo container (including icon and text) */
-    align-items: center;      /* Vertically align the logo icon and text */
+    display: flex;            /* Flexbox for logo and text */
+    align-items: center;      /* Vertically align items */
 }
 
 .logo-icon {
     width: 40px;
     height: 40px;
     fill: #333333;            /* Logo icon color */
-    margin-right: 10px;       /* Space between the logo icon and the text */
+    margin-right: 10px;       /* Space between the logo icon and text */
 }
 
 h1 {
-    font-size: 1.5rem;
-    color: #333333;           /* Default color of the heading text */
+    font-size: 30px;
+    font-style: italic;
+    color: #2947A9;
     margin: 0;                /* Remove any default margin */
 }
 
-
-/* Links Container */
+/* Right of header */
 .links-container {
     display: flex;
     gap: 1rem;
-    /* margin-left: auto; */
+    margin-right: 1rem; /* Add some space between links and dark mode toggle */
+    margin-left: auto;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #333333; /* Default link color */
-    font-size: 1rem;
+    color: #14171F; /* Default link color */
+    font-size: 18px;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #007BFF; /* Highlight color on hover */
+    color: #F9995D; /* Highlight color on hover */
 }
 
-/* Right of header */
+/* Dark Mode Toggle Button */
 .dark-mode-toggle {
-    display: flex;            /* Use Flexbox to align the sun/moon icons */
-    align-items: center;      /* Center the icon vertically */
-    cursor: pointer;         /* Make the logo area clickable */
+    display: flex;
+    align-items: center; 
+    cursor: pointer; 
     font-size: 24px;
-    position: relative;       /* Allow absolute positioning of the icons */
 }
 
-/* Move the mode icons slightly to the bottom and right */
+/* Position mode icons */
 .mode-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;       /* Space between icon and text */
+    width: 24px;
+    height: 24px;
     transition: opacity 0.3s ease; /* Smooth transition for opacity */
-    position: absolute;      /* Allow custom positioning */
-    top: -12px;             /* Move the icons slightly lower */
-    right: -20px;             /* Move the icons slightly to the right */
 }
 
 .mode-icon.sun {
@@ -87,6 +82,8 @@ h1 {
     display: none;
     color: #4B6EFA; /* Moon Icon color - Blue */
 }
+
+
 
 /* Dark Mode Styles */
 #header-toggle:checked ~ header .dark-mode-toggle .mode-icon.sun {
@@ -102,14 +99,10 @@ h1 {
     color: #ffffff; /* Dark Mode Text Color */
 }
 
-#header-toggle:checked ~ header h1 {
-    color: #ffffff; /* Change Text Color in Dark Mode */
-}
-
 #header-toggle:checked ~ header .links-container .nav-link {
     color: #ffffff; /* Change link color in Dark Mode */
 }
 
 #header-toggle:checked ~ header .links-container .nav-link:hover {
-    color: #4B6EFA; /* Highlight color on hover in Dark Mode */
+    color: #F9995D; /* Highlight color on hover in Dark Mode */
 }
