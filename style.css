@@ -12,6 +12,7 @@ header {
     padding: 1rem 2rem;
     background-color: #f4f4f4; /* Default Background */
     transition: background-color 0.3s ease;
+    position: relative; 
 }
 
 /* Left of header Styles */
@@ -81,6 +82,74 @@ h1 {
 .mode-icon.moon {
     display: none;
     color: #4B6EFA; /* Moon Icon color - Blue */
+}
+
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger-menu {
+    display: none; /* Only show in mobile view */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #14171F;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Nav Toggle Checkbox (Hidden) */
+.nav-toggle {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Show Hamburger Menu */
+    .hamburger-menu {
+        display: flex;
+        position: relative; /* Ensure it's aligned with the toggle area */
+        z-index: 2; /* Make sure it stays above other elements */
+    }
+
+    /* Hide Links by Default */
+    .links-container {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(244, 244, 244, 0.5);
+        position: absolute;
+        top: 70%;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        border-radius: 25px;
+        z-index: 1; /* Ensure visibility under other elements */
+        /* filter: opacity(0.5) */
+    }
+
+    /* Show Links when Toggle is Checked */
+    .nav-toggle:checked ~ .links-container {
+        display: flex;
+    }
+
+    
+    .nav-link {
+        padding: 0.1rem 1rem;
+        text-align: left;
+    }
+
+    /* Dark Mode Toggle */
+    .dark-mode-toggle {
+        order: 6; /* Ensure it appears after links */
+        margin: 1rem auto 0; /* Center it horizontally with spacing */
+        position: absolute;
+        top: 0rem; /* Adjust the top offset as needed */
+        right: 1rem;
+    }
 }
 
 
