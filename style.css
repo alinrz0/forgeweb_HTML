@@ -115,6 +115,54 @@ h1 {
 }
 
 
+/* our  Reputation*/
+.reputatiton-section {
+    text-align: center; 
+    padding: 3rem 1rem; 
+    background-color: #ffffff;
+}
+
+.reputatiton-title {
+    font-size: 36px;
+    margin-bottom: 2rem;
+    color: #292E3D;
+}
+
+.feature-boxes {
+    display: flex;
+    justify-content: center; 
+    gap: 2rem;
+    flex-wrap: wrap; /* Ensure boxes stack on smaller screens */
+}
+
+.feature-box {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 2rem;
+    text-align: left;
+    max-width: 292px;
+    border: 1.4px solid #E0E3EB; 
+    width: 100%;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: -1rem;
+}
+
+.feature-title {
+    font-size: 20px;
+    color: #3D445C;
+    margin-bottom: -0.5rem;
+}
+
+.feature-info {
+    font-size: 16px;
+    color: #858EAD;
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -157,9 +205,10 @@ h1 {
         order: 6; /* Ensure it appears after links */
         margin: 1rem auto 0; /* Center it horizontally with spacing */
         position: absolute;
-        top: 0rem; /* Adjust the top offset as needed */
+        top: 0rem; 
         right: 1rem;
     }
+
 }
 
 
@@ -188,4 +237,21 @@ h1 {
 
 #header-toggle:checked ~ header .hamburger-menu span {
     background-color: #ffffff; /* Change link color in Dark Mode */
+}
+
+#header-toggle:checked ~ .reputatiton-section  {
+    background-color: #000000; /* Dark Mode Background */
+}
+
+#header-toggle:checked ~ .reputatiton-section .reputatiton-title {
+    color: #ffffff;
+}
+
+#header-toggle:checked ~ .reputatiton-section .feature-boxes .feature-box {
+    background-color: #000000; /* Dark Mode Background */
+    border: 1.4px solid white; /* Add a white border */
+}
+
+#header-toggle:checked ~ .reputatiton-section .feature-boxes .feature-box .feature-title{
+    color: #ffffff;
 }
