@@ -164,6 +164,83 @@ h1 {
 
 
 
+
+/* Services Section Container */
+.services-section {
+    text-align: center; /* Center title and boxes */
+    padding: 3rem 1rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Section Title */
+.services-section .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Boxes Container */
+.services-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between boxes */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Individual Box Styles */
+.service-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* White and Blue Box Backgrounds */
+.white-box {
+    background-color: #fff;
+    color: #333;
+}
+
+.blue-box {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Hover Effect */
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon in Box */
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Line in Box */
+.service-line {
+    width: 50%;
+    height: 2px;
+    background-color: currentColor; /* Matches the text color */
+    margin: 1rem 0;
+}
+
+/* Box Title */
+.service-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     /* Show Hamburger Menu */
@@ -209,6 +286,7 @@ h1 {
         right: 1rem;
     }
 
+    
 }
 
 
