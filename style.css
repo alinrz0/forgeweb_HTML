@@ -319,6 +319,94 @@ h1 {
 
 
 
+/* Form Section */
+.form-section {
+    padding: 3rem 1rem;
+    background-color: #F6F8F7; /* Light background for contrast */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    max-width: 592px;
+}
+
+/* Headings and Text */
+.form-container h2 {
+    font-size: 36px;
+    margin-bottom: 1rem;
+    color: #292E3D;
+}
+
+.form-container p {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    color: #292E3D;
+}
+
+/* Form Inputs */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+/* Input and Textarea Styles */
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E0E3EB;
+    color: #292E3D; /* Fix for text color */
+    border-radius: 4px;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+/* Input and Textarea Placeholder Styles */
+input::placeholder, textarea::placeholder {
+    color: #A3AAC2; /* Set your desired placeholder color */
+    font-size: 18px; /* Optional: Match input font size */
+}
+
+
+
+input:focus, textarea:focus {
+    border-color: #007BFF;
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 16px 20px;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #2947A9;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 271px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 850px) {
     /* Show Hamburger Menu */
@@ -428,4 +516,24 @@ h1 {
 
 #header-toggle:checked ~ .services-section .section-title {
     color: #ffffff;
+}
+
+#header-toggle:checked ~ .form-section{
+    background-color: #383838;
+}
+
+#header-toggle:checked ~ .form-section .form-container h2{
+    color: #ffffff;
+}
+
+#header-toggle:checked ~ .form-section .form-container p{
+    color: #ffffff;
+}
+
+#header-toggle:checked ~ .form-section .form-container form input{
+    background-color: #000;
+}
+
+#header-toggle:checked ~ .form-section .form-container form textarea{
+    background-color: #000;
 }
