@@ -170,16 +170,15 @@ h1 {
     text-align: center; /* Center title and boxes */
     padding: 0.5rem 1rem;
     background-color: #F6F8F7; /* Light background for contrast */
+    padding-bottom: 76px;
 }
 
-/* Section Title */
 .services-section .section-title {
     font-size: 36px;
     margin-bottom: 2rem;
     color: #292E3D;
 }
 
-/* Boxes Container */
 .services-boxes {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 350px));
@@ -187,7 +186,6 @@ h1 {
     justify-content: center;
 }
 
-/* Individual Box Styles */
 .service-box {
     display: flex;
     flex-direction: column;
@@ -196,13 +194,11 @@ h1 {
     border-radius: 4px;
     padding: 1.5rem;
     width: 271px;
-    /* max-width: 200px; */
     height: 181px;
     text-align: center;
 }
 
 
-/* White and Blue Box Backgrounds */
 .white-box {
     background-color: #fff;
     color: #2947A9;
@@ -214,13 +210,11 @@ h1 {
 }
 
 
-/* Icon in Box */
 .service-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-/* Line in Box */
 .service-line {
     width: 60px;
     height: 2px;
@@ -230,11 +224,99 @@ h1 {
     border: none;
 }
 
-/* Box Title */
 .service-title {
     font-size: 20px;
     font-weight: bold;
 }
+
+
+/* Counsel Section with Background Image */
+.counsel-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    background-image: url('image/unsplash_MP0bgaS_d1c.svg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    height: 300px; /* Adjust height as needed */
+    position: relative;
+    color: #FFFFFF;
+}
+
+/* Overlay to Improve Text Visibility */
+.counsel-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Content Wrapper */
+.counsel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2; /* Ensure it appears above the overlay */
+}
+
+.text-content {
+    max-width: 800px;
+}
+
+.text-content h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.text-content p {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+}
+
+.underline-number {
+    text-decoration: underline;
+    text-decoration-color: #FFFFFF; /* Optional: Add a specific underline color */
+    text-decoration-thickness: 1px; /* Optional: Adjust thickness */
+    text-underline-offset: 3px; /* Optional: Add space between text and underline */
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+.counsel-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 18px;
+    color: white; 
+    background-color: transparent; 
+    border: 2px solid white; 
+    border-radius: 2px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    padding: 16px 20px;
+    top: 124px;
+    left: 1048px;
+}
+
+.counsel-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    border-color: white; 
+}
+
 
 
 /* Responsive Styles */
@@ -281,9 +363,6 @@ h1 {
         top: 0rem; 
         right: 1rem;
     }
-
-    
-    
 }
 
 @media (max-width: 1092px) {
