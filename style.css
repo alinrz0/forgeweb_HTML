@@ -168,24 +168,23 @@ h1 {
 /* Services Section Container */
 .services-section {
     text-align: center; /* Center title and boxes */
-    padding: 3rem 1rem;
-    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 0.5rem 1rem;
+    background-color: #F6F8F7; /* Light background for contrast */
 }
 
 /* Section Title */
 .services-section .section-title {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 36px;
     margin-bottom: 2rem;
-    color: #333;
+    color: #292E3D;
 }
 
 /* Boxes Container */
 .services-boxes {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 350px));
+    gap: 20px; /* Space between boxes */
     justify-content: center;
-    gap: 2rem; /* Space between boxes */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Individual Box Styles */
@@ -194,31 +193,26 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 1.5rem;
-    width: 200px;
-    height: 250px;
+    width: 271px;
+    /* max-width: 200px; */
+    height: 181px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
+
 
 /* White and Blue Box Backgrounds */
 .white-box {
     background-color: #fff;
-    color: #333;
+    color: #2947A9;
 }
 
 .blue-box {
-    background-color: #007BFF;
+    background-color: #2947A9;
     color: #fff;
 }
 
-/* Hover Effect */
-.service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
 
 /* Icon in Box */
 .service-icon {
@@ -228,21 +222,23 @@ h1 {
 
 /* Line in Box */
 .service-line {
-    width: 50%;
+    width: 60px;
     height: 2px;
     background-color: currentColor; /* Matches the text color */
     margin: 1rem 0;
+    color: #E0E3EB;
+    border: none;
 }
 
 /* Box Title */
 .service-title {
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: bold;
 }
 
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     /* Show Hamburger Menu */
     .hamburger-menu {
         display: flex;
@@ -287,9 +283,22 @@ h1 {
     }
 
     
+    
 }
 
+@media (max-width: 1092px) {
+    .services-boxes {
+        grid-template-columns: repeat(2, minmax(300px, 350px));
+    }
 
+    
+}
+
+@media (max-width: 700px) {
+    .services-boxes {
+        grid-template-columns: repeat(1, minmax(300px, 350px));
+    }
+}
 
 /* Dark Mode Styles */
 #header-toggle:checked ~ header .dark-mode-toggle .mode-icon.sun {
@@ -331,5 +340,13 @@ h1 {
 }
 
 #header-toggle:checked ~ .reputatiton-section .feature-boxes .feature-box .feature-title{
+    color: #ffffff;
+}
+
+#header-toggle:checked ~ .services-section{
+    background-color: #383838;
+}
+
+#header-toggle:checked ~ .services-section .section-title {
     color: #ffffff;
 }
