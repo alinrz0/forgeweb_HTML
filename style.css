@@ -10,7 +10,7 @@ header {
     justify-content: space-between; /* Space out elements horizontally */
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #f4f4f4; /* Default Background */
+    background-color: #ffffff; /* Default Background */
     transition: background-color 0.3s ease;
     position: relative; 
 }
@@ -27,9 +27,8 @@ header {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
-    fill: #333333;            /* Logo icon color */
+    width: 38px;
+    height: 47.5px;
     margin-right: 10px;       /* Space between the logo icon and text */
 }
 
@@ -96,7 +95,7 @@ h1 {
 .hamburger-menu span {
     width: 25px;
     height: 3px;
-    background-color: #14171F;
+    background-color: #000000;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -105,6 +104,17 @@ h1 {
 .nav-toggle {
     display: none;
 }
+
+
+/* image below of header */
+.hero-image-container{
+    width: 100%; 
+}
+.hero-image{
+    width: 100%;
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -119,12 +129,12 @@ h1 {
     .links-container {
         display: none;
         flex-direction: column;
-        background-color: rgba(244, 244, 244, 0.5);
+        background-color: rgba(136, 135, 135, 0.236);
         position: absolute;
         top: 70%;
         right: 0;
         width: 200px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
         padding: 1rem 0;
         border-radius: 25px;
         z-index: 1; /* Ensure visibility under other elements */
@@ -164,7 +174,7 @@ h1 {
 }
 
 #header-toggle:checked ~ header {
-    background-color: #333333; /* Dark Mode Background */
+    background-color: #000000; /* Dark Mode Background */
     color: #ffffff; /* Dark Mode Text Color */
 }
 
@@ -174,4 +184,8 @@ h1 {
 
 #header-toggle:checked ~ header .links-container .nav-link:hover {
     color: #F9995D; /* Highlight color on hover in Dark Mode */
+}
+
+#header-toggle:checked ~ header .hamburger-menu span {
+    background-color: #ffffff; /* Change link color in Dark Mode */
 }
