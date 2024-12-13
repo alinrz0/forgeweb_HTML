@@ -408,22 +408,23 @@ input:focus, textarea:focus {
 
 
 
-/* part 1 of footer */
+/* General Styling for Contact Section */
 .contact-subscribe-section {
     display: flex;
     flex-wrap: wrap;
-    padding: 3rem 1rem;
+    padding: 5rem 10%; /* Add space inside the section */
     background-color: #FFFFFF;
-    gap: 2rem; /* Space between left and right parts */
+    gap: 3rem; /* Default gap between left and right parts */
+    box-sizing: border-box; /* Include padding in width calculations */
+    transition: padding 0.3s ease, gap 0.3s ease, background-color 0.3s ease; /* Smooth adjustments for responsiveness and dark mode */
 }
 
 /* Left Part Styling */
 .left-part {
     flex: 1;
-    max-width: 50%; /* Adjust width for responsiveness */
+    max-width: 60%; /* Adjust width for responsiveness */
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
 .info-row {
@@ -434,18 +435,17 @@ input:focus, textarea:focus {
     align-items: center;
 }
 
-.info-row strong{
+.info-row strong {
     color: #2947A9;
 }
-
 
 /* Right Part Styling */
 .right-part {
     flex: 1;
-    max-width: 50%; /* Adjust width for responsiveness */
+    max-width: 40%; /* Adjust width for responsiveness */
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
     text-align: left;
 }
 
@@ -463,22 +463,28 @@ input:focus, textarea:focus {
 
 .subscribe-input {
     flex: 1;
-    padding: 10px 8px;
+    padding: 0 8px; /* Adjust padding to maintain height */
     gap: 10px;
     border: 1px solid #E0E3EB;
     border-radius: 4px;
     font-size: 1rem;
+    width: 280px; /* Set width */
+    height: 41px; /* Set height */
 }
 
 .subscribe-button {
-    padding: 16px 20px;
+    padding: 0 20px; /* Adjust padding to maintain height */
     background-color: #F9995D;
     color: #FFFFFF;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 18px;
+    width: 138px; /* Set width */
+    height: 41px; /* Set height */
 }
+
 
 .subscribe-button:hover {
     background-color: #FF9051;
@@ -498,6 +504,7 @@ input:focus, textarea:focus {
     width: 40px;
     height: 40px;
 }
+
 
 footer{
     background-color: #2947A9;
@@ -554,6 +561,14 @@ footer p{
         top: 0rem; 
         right: 1rem;
     }
+
+    .contact-subscribe-section {
+        flex-direction: column; /* Stack the parts vertically */
+    }
+
+    .left-part, .right-part {
+        max-width: 100%; /* Full width for stacked parts */
+    }
 }
 
 @media (max-width: 1092px) {
@@ -561,8 +576,46 @@ footer p{
         grid-template-columns: repeat(2, minmax(300px, 350px));
     }
 
+    .contact-subscribe-section {
+        padding: 5rem 3%; 
+    }
     
 }
+
+
+@media (max-width: 1200px) {
+    .contact-subscribe-section {
+        padding: 5rem 5%; 
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .contact-subscribe-section {
+        padding: 5rem 2%; 
+    }
+    
+}
+
+@media (max-width: 900px) {
+    .contact-subscribe-section {
+        flex-direction: column; /* Stack the parts vertically */
+    }
+
+    .left-part, .right-part {
+        max-width: 100%; /* Full width for stacked parts */
+    }
+
+    .contact-subscribe-section {
+        padding: 5rem 10%; 
+    }
+
+    .subscribe-input {
+        max-width: 280px; /* Set width */
+    }
+}
+
+
 
 @media (max-width: 700px) {
     .services-boxes {
@@ -640,3 +693,17 @@ footer p{
 #header-toggle:checked ~ .form-section .form-container form textarea{
     background-color: #000;
 }
+
+#header-toggle:checked ~ .contact-subscribe-section{
+    background-color: #000;
+}
+
+#header-toggle:checked ~ .contact-subscribe-section .info-row {
+    color: #FFF;
+}
+
+#header-toggle:checked ~ .contact-subscribe-section .right-part .subscribe-row .subscribe-input{
+    background-color: #000;
+}
+
+
