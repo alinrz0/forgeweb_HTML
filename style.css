@@ -240,7 +240,7 @@ h1 {
     background-size: cover;
     background-position: center;
     text-align: left;
-    height: 300px; /* Adjust height as needed */
+    height: 300px; 
     position: relative;
     color: #FFFFFF;
 }
@@ -287,9 +287,9 @@ h1 {
 
 .underline-number {
     text-decoration: underline;
-    text-decoration-color: #FFFFFF; /* Optional: Add a specific underline color */
-    text-decoration-thickness: 1px; /* Optional: Adjust thickness */
-    text-underline-offset: 3px; /* Optional: Add space between text and underline */
+    text-decoration-color: #FFFFFF; 
+    text-decoration-thickness: 1px; 
+    text-underline-offset: 3px; 
 }
 
 .button-container {
@@ -322,7 +322,7 @@ h1 {
 /* Form Section */
 .form-section {
     padding: 3rem 1rem;
-    background-color: #F6F8F7; /* Light background for contrast */
+    background-color: #F6F8F7;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -367,7 +367,7 @@ input, textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #E0E3EB;
-    color: #292E3D; /* Fix for text color */
+    color: #292E3D; 
     border-radius: 4px;
     font-size: 18px;
     outline: none;
@@ -377,11 +377,9 @@ input, textarea {
 
 /* Input and Textarea Placeholder Styles */
 input::placeholder, textarea::placeholder {
-    color: #A3AAC2; /* Set your desired placeholder color */
-    font-size: 18px; /* Optional: Match input font size */
+    color: #A3AAC2;
+    font-size: 18px; 
 }
-
-
 
 input:focus, textarea:focus {
     border-color: #007BFF;
@@ -506,12 +504,14 @@ input:focus, textarea:focus {
 }
 
 
-footer{
+footer {
     background-color: #2947A9;
     height: 70px;
+    padding-top: 26px; 
+    padding-left: 112px; 
 }
 
-footer p{
+footer p {
     color: #FFFFFF;
     font-size: 16px;
 }
@@ -561,14 +561,6 @@ footer p{
         top: 0rem; 
         right: 1rem;
     }
-
-    .contact-subscribe-section {
-        flex-direction: column; /* Stack the parts vertically */
-    }
-
-    .left-part, .right-part {
-        max-width: 100%; /* Full width for stacked parts */
-    }
 }
 
 @media (max-width: 1092px) {
@@ -614,8 +606,6 @@ footer p{
         max-width: 280px; /* Set width */
     }
 }
-
-
 
 @media (max-width: 700px) {
     .services-boxes {
